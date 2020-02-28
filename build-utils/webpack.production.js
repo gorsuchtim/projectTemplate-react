@@ -1,10 +1,10 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = () => {
+module.exports = () => ({
   output: {
     //[chunkhash]
-    filename: "App.min.js";
-  }
+    filename: "App.min.js"
+  },
   module: {
     rules: [
       {
@@ -49,6 +49,6 @@ module.exports = () => {
         exclude: /node_modules/,
         loader: "babel-loader"
       }
-    ];
+    ]
   }
-};
+});

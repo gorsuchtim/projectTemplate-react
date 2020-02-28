@@ -7,7 +7,7 @@
     "build": "npm run clean && npm run prettier && npm run webpack -- --env.mode production",
     "clean": "rimraf dist",
     "dev": "npm run webpack-dev-server -- --env.mode development --hot",
-    "prettier": "prettier --write \"src/**/*.{htm, css, scss, json, js, jsx}\" --write",
+    "prettier": "prettier --write \"src/**/*.{htm,css,scss,json,js,jsx}\" --write",
     "webpack-dev-server": "webpack-dev-server",
     "webpack": "webpack"
   },
