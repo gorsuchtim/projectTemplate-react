@@ -88,7 +88,7 @@ const Util = {
       el.setAttribute(key, attrs[key]);
     }
     return el;
-  },
+  }
 };
 
 export default Util;
