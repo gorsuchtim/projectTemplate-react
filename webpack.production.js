@@ -17,7 +17,7 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = merge(common, {
   mode: "production",
   output: {
-    filename: App.dist.js,
+    filename: "App.dist.js"
   },
   optimization: {
     minimizer: [
@@ -28,17 +28,17 @@ module.exports = merge(common, {
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
-          removeComments: true,
-        },
-      }),
-    ],
+          removeComments: true
+        }
+      })
+    ]
   },
   plugins: [new MiniCssExtractPlugin({ filename: "App.dist.css" })],
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
       {
         test: /\.js$/,
@@ -47,9 +47,9 @@ module.exports = merge(common, {
         options: {
           use: ["babel-loader", "eslint-loader"],
           failOnError: true,
-          quiet: true,
-        },
-      },
-    ],
-  },
+          quiet: true
+        }
+      }
+    ]
+  }
 });
