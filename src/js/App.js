@@ -1,7 +1,7 @@
-"use strict";
+import React from "react";
 
 const App = () => {
-  console.log("App is running");
+  return <h1>Hello from your fancy react app</h1>;
 };
 
 export default App;
