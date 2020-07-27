@@ -1,0 +1,38 @@
+.commentary {
+  width: 95%;
+  margin: 1em auto;
+  background-color: white;
+  display: grid;
+  width: 100%;
+  text-align: center;
+  @media screen and (min-width: 1125px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 219px 79px;
+  }
+}
+
+.commentary__block {
+  margin: 0 auto;
+  padding: 1em 0;
+  max-width: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &--border-right {
+    content: "";
+    border-right: 1px solid gray;
+    margin: 0;
+  }
+}
+.commentary__headline {
+  margin: 0;
+}
+.commentary__content {
+  font-size: 1.5em;
+}
+.commentary__link {
+  text-decoration: none;
+  color: gray;
+  font-size: 1.5em;
+}

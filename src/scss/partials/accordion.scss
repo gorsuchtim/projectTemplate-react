@@ -1,0 +1,23 @@
+.accordion {
+  background-color: white;
+  padding: 1em;
+}
+.accordion__control {
+  padding: 2em;
+  margin: 1em;
+}
+.accordion__panel {
+  display: block;
+  padding: 1em;
+  height: auto;
+  transition: all 1.5s ease-in-out;
+
+  &[aria-hidden="true"] {
+    display: none;
+    height: 0px;
+  }
+}
+
+// .accordion__panel[aria-hidden="true"] {
+//   display: none;
+// }
