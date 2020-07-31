@@ -25,3 +25,19 @@ $spacing-properties: (
     }
   }
 }
+
+@each $breakpoint in $breakpoint-sizes {
+  @include bp($breakpoint) {
+    @each $className, $property in $spacing-properties {
+      .#{$className}-#{$breakpoint}-auto {
+        #{$property}: auto;
+      }
+
+      @each $spacing in $spacing-options {
+        .#{$className}-#{$breakpoint}-#{$spacing} {
+          #{$property}: #{$spacing}px;
+        }
+      }
+    }
+  }
+}
