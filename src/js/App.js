@@ -1,15 +1,10 @@
 import React, { Fragment } from "react";
 
-import Hero from "./Components/Hero/Hero";
-import Commentary from "./Components/Commentary/Commentary";
-import Accordion from "./Components/Accordion/Accordion";
-
 const App = () => {
   return (
     <Fragment>
-      <Hero />
-      <Commentary />
-      <Accordion />
+      <h1>Hi I'm the template</h1>
+      <h3>Hope you have fun</h3>
     </Fragment>
   );
 };
