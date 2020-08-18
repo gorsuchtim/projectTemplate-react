@@ -1,8 +1,4 @@
 /*** Imports ***/
-
-/*** Executed Code ***/
-window.addEventListener("DOMContentLoaded", App);
-
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -10,6 +6,7 @@ import ReactDOM from "react-dom";
 import App from "./js/App";
 import "./scss/shared.scss";
 
+/*** Render ***/
 ReactDOM.render(
   <React.StrictMode>
     <App />

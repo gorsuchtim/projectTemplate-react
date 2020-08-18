@@ -3,7 +3,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: ["html-loader"],
+        use: ["html-loader"]
       },
       {
         test: /\.(svg|png|jpe?g|gif)$/i,
@@ -12,10 +12,10 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "images",
-            },
-          },
-        ],
+              outputPath: "images"
+            }
+          }
+        ]
       },
       {
         test: /\.m?js$/,
@@ -24,9 +24,10 @@ module.exports = {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-env"],
-          },
-        },
-      },
-    ],
-  },
+            plugins: ["@babel/transform-runtime"]
+          }
+        }
+      }
+    ]
+  }
 };
