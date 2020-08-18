@@ -1,6 +1,11 @@
 "use strict";
 
 const Util = {
+  addEvents(element, eventType, fn, ...args) {
+    element.addEventListener(eventType, function() {
+      fn(args);
+    });
+  },
   buildElement(obj) {
     var element = document.createElement(obj.type);
     obj.attrs != "" ? Util.setAttributes(element, obj.attrs) : false;

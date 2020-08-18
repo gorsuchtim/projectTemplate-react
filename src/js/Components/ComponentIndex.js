@@ -1,7 +1,6 @@
 const ComponentIndex = () => {
   const asyncModules = {
-    ".test-component": "TestComponent",
-    ".should-fail": "ShouldFail"
+    ".component-template": "ComponentTemplate"
   };
 
   const loadModules = async () => {

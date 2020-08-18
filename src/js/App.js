@@ -7,7 +7,7 @@ const App = () => {
       <h1>Hi I am the template</h1>
       <h3>Hope you have fun</h3>
 
-      <div className="test-component"></div>
+      <div className="component-template"></div>
     </Fragment>
   );
 };
