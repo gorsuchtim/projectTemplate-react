@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import ComponentIndex from "./Components/ComponentIndex";
+// import ComponentIndex from "./Components/ComponentIndex";
 
 const App = () => {
   return (
