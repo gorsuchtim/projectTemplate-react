@@ -1,29 +1,30 @@
 {
-  "name": "webpack_template",
+  "name": "projecttemplatereact",
   "version": "1.0.0",
-  "description": "A template build structure for a webpack build",
+  "description": "A react template build structure for a webpack build",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && npm run format && webpack --config webpack.production.js",
+    "build": "npm run clean && npm run lint && webpack --config webpack.production.js",
     "clean": "rimraf dist",
     "dev": "npm run dev:tailwind && webpack-dev-server --config webpack.development.js --open",
-    "dev:tailwind": "npx tailwindcss build src/css/tailwind.css -o src/scss/tailwind/_tailwind.scss",
+    "dev:tailwind": "npx tailwindcss build src/scss/tailwind/tailwind.css -o src/css/tailwind/tailwind.css && npm run minify:tailwind",
     "format": "npm run lint && npm run prettier",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "minify:tailwind": "cleancss src/css/tailwind/tailwind.css -o src/css/tailwind/tailwind.css --debug",
     "prettier": "prettier --write \"src/**/*.{html,htm,css,scss,json,js,jsx}\" --write",
     "start": "npm run dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gorsuchtim/webpack_template.git"
+    "url": "git+https://github.com/gorsuchtim/projectTemplate-react.git"
   },
   "keywords": [],
   "author": "Tim Gorsuch",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gorsuchtim/webpack_template/issues"
+    "url": "https://github.com/gorsuchtim/projectTemplate-react/issues"
   },
-  "homepage": "https://github.com/gorsuchtim/webpack_template#readme",
+  "homepage": "https://github.com/gorsuchtim/projectTemplate-react#readme",
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/plugin-transform-shorthand-properties": "^7.10.4",
@@ -32,6 +33,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "clean-css-cli": "^4.3.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
     "eslint": "^6.8.0",

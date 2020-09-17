@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  purge: ["src/**/*.html", "src/**/*.js", "src/**/*.jsx"],
   theme: {
     screens: {
       sm: "460px",
@@ -9,7 +9,6 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-
       black: "#000",
       white: "#fff",
       red: "#d80a07",
@@ -17,27 +16,8 @@ module.exports = {
       orange: "#ffa53c",
       teal: "#05d4e1",
 
-      "blue-bg-pale": "#edf6ff",
-      "blue-info": "#edf6ff",
-      "blue-vivid": "#0a80ff",
-      "blue-vivid-hover": "#0066d4",
-
-      "gray-bg-light": "#f2f7f7",
-      "gray-bg-md": "#ebf0f0",
-      "gray-bg-dark": "#e3e8e8",
-      "gray-heather": "#cbd1d7",
-      "gray-heather-hover": "#9da3a8",
-      "gray-slate": "#525161",
-      "gray-slate-hover": "#464553",
-      "gray-steel": "#32313a",
-      "gray-steel-hover": "#1f1f25",
-
-      "cyan-vivid": "#05d5e1",
-      "green-success": "#d8f7dd",
-      "red-error": "#fdd",
-      "red-vivid": "#f00",
-      "yellow-soft": "#feea6e",
-      "yellow-warning": "#fff8c9",
+      "blue--primary": "#20e4ff",
+      "pink--primary": "#e33cc7",
     },
     spacing: {
       full: "100%",
@@ -72,7 +52,6 @@ module.exports = {
     },
     borderColor: (theme) => ({
       ...theme("colors"),
-      default: theme("colors['gray-heather']", "currentColor"),
     }),
 
     borderRadius: {
@@ -98,7 +77,14 @@ module.exports = {
       none: "none",
       hover:
         "0 2px 4px -1px rgba(50, 80, 112, 0.2), 0 8px 10px 1px rgba(50, 80, 112, 0.14), 0 3px 14px 2px rgba(50, 80, 112, 0.12)",
-      1: "0 2px 4px -1px rgba(50, 80, 112, 0.2), 0 4px 6px 0 rgba(50, 80, 112, 0.14), 0 1px 10px 0 rgba(50, 80, 112, 0.12)",
+      primary:
+        "0 2px 4px -1px rgba(50, 80, 112, 0.2), 0 4px 6px 0 rgba(50, 80, 112, 0.14), 0 1px 10px 0 rgba(50, 80, 112, 0.12)",
+      "lit--blue":
+        "0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff, 0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff",
+      "lit--green":
+        "0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #5aff18, 0 0 70px #5aff18, 0 0 80px #5aff18, 0 0 100px #5aff18, 0 0 150px #5aff18",
+      "lit--white":
+        "0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px white, 0 0 70px white, 0 0 80px white, 0 0 100px white, 0 0 150px white",
     },
 
     fontSize: {
@@ -201,6 +187,8 @@ module.exports = {
       ...theme("spacing"),
       ...negative(theme("spacing")),
     }),
+
+    textColor: (theme) => theme("colors"),
 
     width: (theme) => ({
       auto: "auto",
